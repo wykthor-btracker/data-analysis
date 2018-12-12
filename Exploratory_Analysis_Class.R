@@ -2,7 +2,9 @@ library(dplyr)
 library(ggplot2)
 library(tidyr)
 
-hsb2 = read.csv("/Users/baldoino/Desktop/Datasets/hsb2.csv")
+path <- "/Users/baldoino/Dropbox/Professional/Courses/Master/Aulas/12-Dez-2018/Datasets/"
+
+hsb2 = read.csv(paste(path,"hsb2.csv",sep=""))
 
 str(hsb2)
 
@@ -31,7 +33,7 @@ hsb2_private <- hsb2 %>% filter(schtyp == "private")
 
 ggplot(data = hsb2, aes(x = science, y = math, color = prog)) + geom_point()
 
-county = read.csv("/Users/baldoino/Desktop/Datasets/countyComplete.csv")
+county = read.csv(paste(path,"countyComplete.csv",sep=""))
 
 str(county)
 county_noDC <- county %>% filter(state != "District of Columbia") %>% droplevels()
@@ -40,7 +42,7 @@ county_srs <- county_noDC %>% sample_n(size = 150)
 
 glimpse(county_srs)
 
-comics = read.csv("/Users/baldoino/Desktop/Datasets/comics.csv")
+comics = read.csv(paste(path,"comics.csv",sep=""))
 comics
 
 levels(comics$align)
@@ -60,10 +62,10 @@ prop.table(tab_cnt,2)
 
 ggplot(comics, aes(x = id, fill = align)) + geom_bar(position = "fill") + ylab("proportion")
 
-cars = read.csv("/Users/baldoino/Desktop/Datasets/cars.csv")
+cars <- read.csv(paste(path,"cars.csv",sep=""))
 str(cars)
 
-life = read.csv("/Users/baldoino/Desktop/Datasets/life.csv")
+life <- read.csv(paste(path,"life.csv",sep=""))
 str(life)
 x <- head(life$Male.life.expectancy..years., 11)  
 mean(x)
