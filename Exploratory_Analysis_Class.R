@@ -2,7 +2,7 @@ library(dplyr)
 library(ggplot2)
 library(tidyr)
 
-path <- "/Users/baldoino/Dropbox/Professional/Courses/Master/Aulas/12-Dez-2018/Datasets/"
+path <- ""
 
 hsb2 = read.csv(paste(path,"hsb2.csv",sep=""))
 
