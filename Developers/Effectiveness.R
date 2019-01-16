@@ -200,7 +200,7 @@ for(j in 1:10){
   
   print(colnames(developers)[j])
   
-  path <- paste("C:\\Users\\Wykthor\\Downloads\\gitstuff\\data-analysis\\Developers\\",colnames(developers)[j],"\\",colnames(developers)[j],"\ -\ ",sep="")
+  path <- paste("/Users/baldoino/Dropbox/Professional/Courses/Master/Aulas/12-Dez-2018/Developers/",colnames(developers)[j],"/",colnames(developers)[j]," - ",sep="")
   
   results <- data.frame(0,0,0, 0, 0,0,0)
   
